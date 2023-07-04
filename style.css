@@ -1,0 +1,158 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* VARIABLES */
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-blue: hsl(211, 68%, 94%);
+  --Light-grayish-blue: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+/* BASE */
+
+html {
+  font-size: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--Light-grayish-blue);
+}
+
+/* CARD */
+
+.card {
+  max-width: 730px;
+  width: 100%;
+  background-color: var(--White);
+  padding: 2.1875rem 1.125rem;
+  border-radius: 0.3125rem;
+}
+
+/* CARD HEADER */
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.card__notification {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+h1 {
+  font-size: 1.125rem;
+  color: var(--Very-dark-blue);
+  font-weight: 800;
+}
+
+p {
+  color: var(--Grayish-blue);
+}
+
+.button {
+  padding: 0 0.7rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--White);
+  background-color: var(--Blue);
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.card__header p {
+  color: var(--Dark-grayish-blue);
+}
+
+/* CARD BODY */
+
+.card__message {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5625rem;
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+}
+
+/* SPAN TEXT STYLES */
+.very-dark-blue-text {
+  color: var(--Very-dark-blue);
+  font-weight: 800;
+}
+
+.dark-grayish-blue-text {
+  color: var(--Dark-grayish-blue);
+}
+
+.blue-text {
+  color: var(--Blue);
+  font-weight: 800;
+}
+
+/* ========================= */
+
+/* style for the first three messages */
+
+.card__message:first-child,
+.card__message:nth-child(2),
+.card__message:nth-child(3) {
+  background-color: var(--Light-grayish-blue);
+}
+
+/* STYLE FOR THE CHESS IMAGE */
+
+.cover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.chess-img {
+  width: 50px;
+  height: 50px;
+}
+
+/* ======================== */
+
+/* STYLE FOR THE PRIVATE MESSAGE BOX */
+.card__box {
+  border: 2px solid var(--Light-grayish-blue);
+  margin-left: 4.375rem;
+  max-width: 560px;
+  padding: 1.5625rem;
+  margin-bottom: 3.125rem;
+}
+
+/* DESTOP VERSION STARTING FROM 1024PX */
+
+@media (min-width: 64em) {
+  .card {
+    margin: 3.75rem auto;
+  }
+}
